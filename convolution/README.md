@@ -40,3 +40,10 @@ you need during the exercise.
     - Generate the assembler and look for possible source of load stalls.
     - Report the performance in the form of MAC/cycles.
         - What is the speedup?
+
+
+
+
+Useful information:
+
+The  PULP builtin functions are defined at [here](https://github.com/pulp-platform/pulp-riscv-gcc/blob/bfb8fa748e5d0c79b0958c7870cd42a4923c6d9f/gcc/config/riscv/pulp_builtins.def)
