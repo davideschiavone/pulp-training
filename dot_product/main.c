@@ -42,6 +42,10 @@ int main()
   if(get_core_id() == 0) {
     init_vec(vecA,NELEM,0);
     init_vec(vecB,NELEM,1);
+
+    perf_reset();
+    perf_start();
+
     #ifdef USE_SIMD
     acc += dotproduct_loopunroll_simd(acc, vecA, vecB, NELEM);
     #else
@@ -51,6 +55,10 @@ int main()
     acc += dotproduct(acc, vecA, vecB, NELEM);
     #endif
     #endif
+
+    perf_stop();
+    perf_print_all();
+
     if(acc != GOLDEN_VALUE)
       printf("dot product is is %d instead of %d\n",acc, GOLDEN_VALUE);
     else
