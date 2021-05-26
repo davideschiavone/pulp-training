@@ -10,15 +10,15 @@ For a quick guide to use assembler in GCC have a look at https://gcc.gnu.org/onl
 ```
 Compile the application (make clean all)
 Generate the assember (make dis > dis.s)
-Run it in gui mode (make conf gui=1 run)
+Run it in gui mode (make run gui=1)
 ```
 
 Identify the dot product parts in the assembler.
-After executing the code, check both the trace file in ./build/pulpissimo/trace_core_1f_0.log to see the instructions executed by the core.
+After executing the code, check both the trace file in ./build/pulpissimo/trace_core_1f_0.log to see the instructions executed by the core and the assembly.
 Can you find the dot product part?
 
 ```
-How many cycles do you exept from such function? Why?
+How many cycles do you expect from such function? Why?
 ```
 
 ## Loop Unrolling
@@ -27,9 +27,8 @@ Improve the application using the loop unrolling technique we have seen at the l
 Complete the provided function and repeat the step above.
 
 ```
-How many cycles do you exept from such function?
+How many cycles do you expect from such function?
 Analyze the trace around your function. Where is the stall?
-Introduce the c.nop instruction to align the address of the first instruction of the HWloop to get best performance.
 ```
 
 ## Use of the SIMD instructions
