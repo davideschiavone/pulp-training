@@ -41,7 +41,7 @@ for more information.
 The file convolution.h explains the vector data types and the built-in functions
 you need during the exercise.
 
-2. Task 2
+3. Task 3
     -  Define in the Makefile the DOTP flag and complete the Conv5x5_Vector function.
         - Refer to the lecture to know the steps to do and use the built-in functions when needed.
     - Compile it and run it. Check whether the results are correct or not.
