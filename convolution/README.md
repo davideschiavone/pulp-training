@@ -21,7 +21,15 @@ The filter has the same Q1.13 format.
     exploit loop unrolling as seen in the previous exercise.
         - Can you beat the compiler? Why?
 
-To exploit the PULP extensions, you need to let the compiler now that we want to use
+2. Task 2
+    - Compile the kernel written in Task 1 with PULP extensions.
+    - Generate the assembler and look for possible source of load stalls.
+    - Report the performance in the form of MAC/cycles.
+    - [Optional] Rewrite the convolutional part of the Conv5x5_Scalar function to
+    exploit loop unrolling as seen in the previous exercise.
+        - Can you beat the compiler? Why?
+       
+To exploit the PULP pSIMD extensions, you need to let the compiler now that we want to use
 vectors instead of normal scalar number.
 
 To do so, GCC has some special attribute to be used in the data type and built-in functions
@@ -46,4 +54,6 @@ you need during the exercise.
 
 Useful information:
 
-The  PULP builtin functions are defined at [here](https://github.com/pulp-platform/pulp-riscv-gcc/blob/bfb8fa748e5d0c79b0958c7870cd42a4923c6d9f/gcc/config/riscv/pulp_builtins.def)
+The  PULP builtin functions are defined [here](https://github.com/pulp-platform/pulp-riscv-gcc/blob/bfb8fa748e5d0c79b0958c7870cd42a4923c6d9f/gcc/config/riscv/pulp_builtins.def)
+
+The PULP extensions are defined [here](https://cv32e40p.readthedocs.io/en/latest/instruction_set_extensions/)
